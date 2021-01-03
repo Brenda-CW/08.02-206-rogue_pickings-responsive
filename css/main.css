@@ -1,0 +1,189 @@
+html {
+	font-size: 16px;
+}
+
+body {
+	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+	font-size: 1em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
+	flex: 1 1 auto;
+}
+/***Full Container - C1***/
+.container{
+	max-width: 480px;
+	/***min-width: 200px;***/
+	width: 90%;  /*** WHY SET A WIDTH WHEN WE WANT IT TO GROW/SHRINK WHEN MOVING ACROSS DEVICES?  ***/
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	flex-flow: row wrap;
+	flex: 1 1 auto;
+	border: 1px solid #eee;
+}
+
+h1,
+h2,
+h3 {
+	color: black;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+h1 {
+	font-size: 2em;
+}
+h2 {
+	font-size: 1em;
+}
+h3 {
+	font-size: .75em;
+}
+
+p {
+	font-size: .6em;
+	line-height: 1.25em;
+    padding: 0 30px;
+}
+
+/*The widths are in a percentage!*/
+
+/***Header Container - C2; ***/
+header {
+	display: flex;
+	flex: 1 1 auto;
+	flex-flow: row wrap;
+	justify-content: center;  /**** Why is this not centering nav unless I set direction to column??***/
+	flex-direction: column;  /*** this set main axis as vertical, so justify content acts vertically**/
+	align-items: center; /** align-items acts on cross axis, which is horizontal due to flex direction**/
+	border-bottom: 3px solid #77a466;
+}
+
+header h1 {
+	margin: 0;
+	padding: 30px 0;
+}
+header h1 span {
+	color: #77a466;
+}
+
+header nav {
+	padding: 46px 0;
+}
+header nav ul {
+	margin: 0;
+	padding: 0;
+}
+header nav ul li {
+	list-style: none;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 1em;
+	padding: 10px;
+
+}
+header nav ul li a{
+	text-decoration: none;
+	color:#77a466;
+}
+
+/*The widths are in a percentage!*/
+
+/***Pic down through Contact - C3; WHY PUT THESE SECTIONS TOGETHER??***/
+.top-section,
+.bottom-section {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-flow: row wrap;
+	flex: 1 1 auto;
+}
+
+/****Pic & Welcome heading/text- C4; THIS SECTION WILL NOT ADJUST SIZE NO MATTER WHAT I DO. WHAT IS ACTING ON THIS PREVENTING IT FROM ADJUSING? BOTTOM SECTION IS WORKING SO DON'T UNDERSTANDY WHY TOP SECTION IS ACTING DIFFERENTLY ****/
+.main-image {
+	/**flex: 1 1 auto; **/
+}
+.main-image img {
+	border-bottom: 3px solid #77a466;
+}
+
+.main-title {
+	/** flex: 0 1 auto;  **/
+}
+.main-title h2 {
+	/***text-align: left; IS THIS NEEDED? IS JUSTIFY-CONTENT IN TOP/BOTTOM SECTION SETTING THIS?***/
+	padding: 10px 20px;
+	color: #77a466;
+}
+.main-title p {
+	padding: 0px 30px;
+	font-size: 16px;
+	line-height: 25px;
+}
+
+/****Today's specials, Our Awesome Reviews, contact - C5; THESE SECTIONS ARE WORKING WITHOUT ANY FLEX SETTINGS LISTED HERE**/
+.section-one,
+.section-two,
+.section-three {
+	border-top: 1px solid #eee;
+
+}
+
+.section-one h3, 
+.section-two h3,
+.section-three h3 {
+	padding: 10px 20px;
+}
+
+/**Today's Specials - C6**/
+/****WHY WON'T TOP BORDER FILL CONTAINER?
+WHERE IS PADDING COMING FROM?***/
+
+.menu {
+	list-style: none;
+
+}
+.menu li {
+	padding: 10px 0px;
+	color:#77a466;
+}
+
+/**Our Awesome Reviews - C7
+WHERE IS PADDING COMING FROM? **/
+.reviews {
+	color: #333;
+	font-size: 1em;
+	line-height: 21px;
+}
+
+/***Contacts- C8**/
+/****WHY WON'T TOP BORDER FILL CONTAINER?
+WHERE IS PADDING COMING FROM?***/
+
+.address {
+	font-size: 1em;
+	line-height: 24px;
+}
+
+/*The widths are in a percentage! ***/
+/****WHY WON'T TOP BORDER FILL CONTAINER?***/
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
+	flex-basis: 1 1 auto;
+	margin: 0 auto;
+	border-top: 3px solid #eee;
+	/***text-align: center;   IS THIS NEEDED?  IS JUSTIFY CONTENT DOING SAME THING? ***/
+
+}
+footer span {
+	font-family: 'Galada', cursive;
+	text-transform: lowercase;
+	color: #77a466;
+	font-size: .85em;
+}
