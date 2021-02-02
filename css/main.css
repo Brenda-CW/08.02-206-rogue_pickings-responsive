@@ -1,3 +1,5 @@
+/**  MOBILE FIRST DESIGN  **/
+
 html {
 	font-size: 16px;
 }
@@ -5,24 +7,16 @@ html {
 body {
 	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
 	font-size: 1em;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-flow: row wrap;
-	flex: 1 1 auto;
+	
 }
-/***Full Container - C1***/
+/*** Full Container - C1***/
 .container{
-	max-width: 480px;
-	/***min-width: 200px;***/
+
 	width: 90%;  
-	margin: 0 auto;
-	display: flex;
+	margin: 0 auto; 
 	justify-content: center;
 	align-items: center;
-	align-content: center;
-	flex-flow: row wrap;
-	flex: 1 1 auto;
+	flex-flow: row wrap; 
 	border: 1px solid #eee;
 }
 
@@ -34,46 +28,50 @@ h3 {
 	font-weight: 700;
 }
 h1 {
-	font-size: 2em;
+	font-size: 2rem;
 }
 h2 {
-	font-size: 1em;
+	font-size: 1rem;
 }
+
 h3 {
-	font-size: .75em;
+	font-size: .75rem;
 }
 
 p {
-	font-size: .6em;
-	line-height: 1.25em;
+	font-size: .6rem;
+	line-height: 1.25rem;
     padding: 0 30px;
 }
 
 /*The widths are in a percentage!*/
 
-/***Header Container - C2; ***/
+/*** Header Container - C2; ***/
 header {
-	display: flex;
-	flex: 1 1 auto;
-	flex-flow: row wrap;
-	justify-content: center;  /**** Why is this not centering nav unless I set direction to column??***/
-	flex-direction: column;  /*** this set main axis as vertical, so justify content acts vertically**/
-	align-items: center; /** align-items acts on cross axis, which is horizontal due to flex direction**/
-	border-bottom: 3px solid #77a466;
+	max-width: 100%;
+	border-bottom:3px solid #77a466;
+	padding: 15px 0px;
+	text-align: center;
 }
 
 header h1 {
-	margin: 0;
-	padding: 30px 0;
+	padding: 30px 15px;
+	border-bottom:3px solid #77a466; 
 }
+
 header h1 span {
 	color: #77a466;
 }
 
 header nav {
-	padding: 46px 0;
+	padding: 10px 15px;
+	/** border-top: 3px solid #77a466;  
+	flex: 1 1 auto;  **/
 }
 header nav ul {
+	display: flex;
+	justify-content: space-around;
+	flex-flow: row wrap;
 	margin: 0;
 	padding: 0;
 }
@@ -81,67 +79,63 @@ header nav ul li {
 	list-style: none;
 	text-transform: uppercase;
 	font-weight: 700;
-	font-size: 1em;
+	font-size: 1rem;
 	padding: 10px;
 
 }
-header nav ul li a{
+header nav ul li a {
 	text-decoration: none;
 	color:#77a466;
 }
 
 /*The widths are in a percentage!*/
 
-/***Pic down through Contact - C3; WHY PUT THESE SECTIONS TOGETHER??***/
+/*** Pic down through Contact - C3; ***/
+
+
 .top-section,
 .bottom-section {
 	display: flex;
-	justify-content: flex-start;
+	justify-content: space-evenly;
 	align-items: center;
 	flex-flow: row wrap;
-	flex: 1 1 auto;
-}
+} 
 
-/****Pic & Welcome heading/text- C4; THIS SECTION WILL NOT ADJUST SIZE NO MATTER WHAT I DO. WHAT IS ACTING ON THIS PREVENTING IT FROM ADJUSING? BOTTOM SECTION IS WORKING SO DON'T UNDERSTANDY WHY TOP SECTION IS ACTING DIFFERENTLY ****/
-.main-image {
-	/**flex: 1 1 auto; **/
-}
+/****Pic & Welcome heading/text- C4; ****/
+
 .main-image img {
 	border-bottom: 3px solid #77a466;
-	max-width: 100%;
+	width: 100%;
 }
 
-.main-title {
-	/** flex: 0 1 auto;  **/
-}
+/** .main-title {
+}  **/
+
 .main-title h2 {
-	/***text-align: left; IS THIS NEEDED? IS JUSTIFY-CONTENT IN TOP/BOTTOM SECTION SETTING THIS?***/
 	padding: 10px 20px;
 	color: #77a466;
 }
 .main-title p {
 	padding: 0px 30px;
-	font-size: 16px;
+	font-size: 1rem;
 	line-height: 25px;
 }
 
-/****Today's specials, Our Awesome Reviews, contact - C5; THESE SECTIONS ARE WORKING WITHOUT ANY FLEX SETTINGS LISTED HERE**/
+/****Today's specials, Our Awesome Reviews, contact - C5 **/
 .section-one,
 .section-two,
 .section-three {
 	border-top: 1px solid #eee;
-
+	width: 100%;
 }
 
 .section-one h3, 
 .section-two h3,
 .section-three h3 {
-	padding: 10px 20px;
+	padding: 10px 20px; 
 }
 
 /**Today's Specials - C6**/
-/****WHY WON'T TOP BORDER FILL CONTAINER?
-WHERE IS PADDING COMING FROM?***/
 
 .menu {
 	list-style: none;
@@ -152,39 +146,110 @@ WHERE IS PADDING COMING FROM?***/
 	color:#77a466;
 }
 
-/**Our Awesome Reviews - C7
-WHERE IS PADDING COMING FROM? **/
+/**Our Awesome Reviews - C7  **/
+
 .reviews {
 	color: #333;
-	font-size: 1em;
+	font-size: 1rem;
 	line-height: 21px;
 }
 
 /***Contacts- C8**/
-/****WHY WON'T TOP BORDER FILL CONTAINER?
-WHERE IS PADDING COMING FROM?***/
 
 .address {
-	font-size: 1em;
+	font-size: 1rem;
 	line-height: 24px;
 }
 
 /*The widths are in a percentage! ***/
-/****WHY WON'T TOP BORDER FILL CONTAINER?***/
 footer {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-flow: row wrap;
-	flex-basis: 1 1 auto;
-	/** margin: 0 auto; **/
-	border-top: 3px solid #eee;
-	/***text-align: center;   IS THIS NEEDED?  IS JUSTIFY CONTENT DOING SAME THING? ***/
-
+	border-top: 1px solid #eee;
 }
+
 footer span {
 	font-family: 'Galada', cursive;
 	text-transform: lowercase;
 	color: #77a466;
-	font-size: .85em;
+	font-size: .85rem;
 }
+/************  RESPONSIVE STYLES  *************/
+/****************   TABLET    ****************/
+
+@media only screen and (min-width: 768px) {
+/* Tablet styles here  */
+
+	.main-title {
+		display: flex;
+		flex-flow: column wrap;
+		align-items: flex-start;
+	}
+	.bottom-section {
+		justify-content:space-between;
+		align-items: flex-start;
+	}
+
+	.section-one, 
+	.section-two,
+	.section-three {
+		display: flex;
+		flex: 1;
+		flex-flow: column wrap;
+		justify-content:flex-start;
+		align-items: flex-start;
+	}
+	
+	.section-two {
+		display: flex;
+		flex-flow: column wrap;
+		border-right: 1px solid #eee;
+		border-left: 1px solid #eee
+	}	
+
+	.section-three {  
+		display: flex;
+		flex-flow: column wrap;
+	}
+}
+
+/****************   DESKTOP    ****************/
+@media only screen and (min-width: 1200px) {
+/* Desktop styles here  */
+/* Fix the following -
+4. align left side items -headings, image, content
+***/
+header {
+	display: flex;
+	align-items: baseline;
+}
+header h1 {
+	border-bottom: none;
+	width: 50%;
+	text-align: left;
+}
+header nav {
+	width:60%;
+
+	}
+	.main-image {
+		display:flex;
+		width:100%;
+	}
+	
+	.bottom-section {
+		display: flex;
+		justify-content: space-evenly;
+		justify-items: center;
+	}
+
+	.section-one, 
+	.section-two,
+	.section-three {
+		flex: 1;
+	}
+
+
+}	
